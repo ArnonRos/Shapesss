@@ -9,11 +9,11 @@ namespace Shapes
     public abstract class Shape
     {
         private static int nextid = 1;
-        public int id { get; set; }
+        public string id { get; set; }
         public Color color { get; set; }
         public Shape(Color color)
         {
-            id = nextid;
+            id = nextid.ToString().PadLeft(9, '0');
             nextid++;
             this.color = color;
         }
